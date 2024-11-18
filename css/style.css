@@ -271,18 +271,6 @@ footer a:hover {
 }
 
 
-/* Анімація появи елементів при скролі */
-.card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease-out;
-}
-
-.card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Ховер ефект для карток */
 .card:hover {
     transform: scale(1.05);
