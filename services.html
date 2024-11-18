@@ -39,88 +39,150 @@
     <!--MAIN CONTENT-->
     <main class="container">
 
-<!--SERVICES SECTION-->
-<section id="services" class="section py-5">
+<section id="services" class="services-section py-5">
     <div class="container">
-        <h2>Наші послуги</h2>
-        <div class="row">
+        <header class="text-center mb-5">
+            <h2 class="section-title">Наші послуги</h2>
+            <p class="lead text-muted">Комплексні IT-рішення для вашого бізнесу</p>
+        </header>
+        <div class="row services-grid">
+            <!-- Технічна підтримка -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Технічна підтримка</h3>
-                        <p class="card-text">24/7 підтримка для користувачів та підприємств</p>
-                        <img src="picture/tech_support.jpg" alt="Технічна підтримка" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                                <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                                <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Технічна підтримка</h3>
+                        <p class="card-text text-muted">24/7 підтримка для користувачів та підприємств</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Встановлення ПЗ -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Встановлення ПЗ</h3>
-                        <p class="card-text">Налаштування та оптимізація програмного забезпечення Microsoft</p>
-                        <img src="picture/soft_install.jpg" alt="Встановлення ПЗ" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Встановлення ПЗ</h3>
+                        <p class="card-text text-muted">Налаштування та оптимізація програмного забезпечення Microsoft</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Оновлення систем -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Оновлення систем</h3>
-                        <p class="card-text">Регулярні оновлення та виправлення помилок</p>
-                        <img src="picture/soft_update.jpg" alt="Оновлення системи" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw">
+                                <polyline points="23 4 23 10 17 10"></polyline>
+                                <polyline points="20.49 15 17 10 20.49 5"></polyline>
+                                <path d="M22 12a10 10 0 0 1-10 10 9.89 9.89 0 0 1-7.52-3.65"></path>
+                                <path d="M1 4a10 10 0 0 1 10-4 9.89 9.89 0 0 1 7.52 3.65"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Оновлення систем</h3>
+                        <p class="card-text text-muted">Регулярні оновлення та виправлення помилок</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Консультації -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Консультації</h3>
-                        <p class="card-text">Експертні поради з ліцензування та оптимізації рішень Microsoft</p>
-                        <img src="picture/consultation.jpg" alt="Консультація" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.38 8.38 0 0 1 3.8.9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Консультації</h3>
+                        <p class="card-text text-muted">Експертні поради з ліцензування та оптимізації рішень Microsoft</p>
                     </div>
                 </div>
             </div>
-            <!-- Additional Services -->
+
+            <!-- Навчання користувачів -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Навчання користувачів</h3>
-                        <p class="card-text">Проведення тренінгів та навчальних сесій для співробітників</p>
-                        <img src="picture/user_training.jpg" alt="Навчання користувачів" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Навчання користувачів</h3>
+                        <p class="card-text text-muted">Проведення тренінгів та навчальних сесій для співробітників</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Резервне копіювання -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Резервне копіювання</h3>
-                        <p class="card-text">Захист даних шляхом налаштування автоматизованого резервного копіювання</p>
-                        <img src="picture/backup.jpg" alt="Резервне копіювання" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                <polyline points="7 3 7 8 15 8"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Резервне копіювання</h3>
+                        <p class="card-text text-muted">Захист даних шляхом налаштування автоматизованого резервного копіювання</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Аудит безпеки -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Аудит безпеки</h3>
-                        <p class="card-text">Перевірка безпеки систем для виявлення потенційних загроз</p>
-                        <img src="picture/security_audit.jpg" alt="Аудит безпеки" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Аудит безпеки</h3>
+                        <p class="card-text text-muted">Перевірка безпеки систем для виявлення потенційних загроз</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Інтеграція сервісів -->
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title">Інтеграція сервісів</h3>
-                        <p class="card-text">Інтеграція Microsoft 365 та інших рішень для підвищення продуктивності</p>
-                        <img src="picture/service_integration.png" alt="Інтеграція сервісів" class="img-fluid" loading="lazy">
+                <div class="service-card card h-100 shadow-sm border-0 hover-lift">
+                    <div class="card-body text-center">
+                        <div class="service-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-merge">
+                                <circle cx="18" cy="18" r="3"></circle>
+                                <circle cx="6" cy="6" r="3"></circle>
+                                <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title h4 mb-3">Інтеграція сервісів</h3>
+                        <p class="card-text text-muted">Інтеграція Microsoft 365 та інших рішень для підвищення продуктивності</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--/SERVICES SECTION-->
 
 
 <!--PRICE SECTION-->
