@@ -20,8 +20,8 @@ document.querySelectorAll('#gallery img').forEach(img => {
 });
 
 
-// Set the target date for the countdown
-const targetDate = new Date("Dec 25, 2024 00:00:00").getTime();
+// Set the target date for International Animal Day
+const targetDate = new Date("Oct 4, 2025 00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -42,7 +42,7 @@ function updateCountdown() {
   // If the countdown is finished
   if (timeLeft < 0) {
     clearInterval(countdownInterval);
-    document.getElementById("countdown").innerHTML = "Promotion Ended";
+    document.getElementById("countdown").innerHTML = "Міжнародний день Звірів настав!";
   }
 }
 
@@ -51,4 +51,3 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 
 // Initial call to display the timer right away
 updateCountdown();
-
