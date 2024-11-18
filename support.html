@@ -41,20 +41,23 @@
 
 
         
-       <!--FEEDBACK SECTION-->
+<!--FEEDBACK SECTION-->
 <section id="feedback" class="section py-5">
-    <h2>Зворотний зв'язок</h2>
+    <h2 class="text-center mb-4">Зворотний зв'язок</h2>
     <div class="row">
-        <div class="col-lg-6">
-            <form class="feedback-form">
+        <div class="col-lg-6 mb-4">
+            <form class="feedback-form shadow p-4 rounded">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Ваше ім'я" required>
+                    <label for="name" class="form-label">Ваше ім'я</label>
+                    <input type="text" id="name" class="form-control" placeholder="Введіть ваше ім'я" required>
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Ваш Email" required>
+                    <label for="email" class="form-label">Ваш Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Введіть ваш Email" required>
                 </div>
                 <div class="mb-3">
-                    <select class="form-select" required>
+                    <label for="topic" class="form-label">Тема</label>
+                    <select id="topic" class="form-select" required>
                         <option value="" disabled selected>Оберіть тему</option>
                         <option value="feedback">Зворотний зв'язок</option>
                         <option value="support">Підтримка</option>
@@ -62,23 +65,31 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" placeholder="Ваше повідомлення" rows="5" required></textarea>
+                    <label for="message" class="form-label">Ваше повідомлення</label>
+                    <textarea id="message" class="form-control" placeholder="Напишіть ваше повідомлення" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Відправити</button>
+                <button type="submit" class="btn btn-primary w-100">Відправити</button>
             </form>
         </div>
         <div class="col-lg-6">
-            <img src="images/feedback.webp" alt="Зворотний зв'язок" class="img-fluid" loading="lazy">
-            <div class="contact-info mt-4">
-                <h3>Додаткова інформація для контакту</h3>
-                <p><strong>Телефон:</strong> +38 (012) 345-67-89</p>
-                <p><strong>Email:</strong> contact@example.com</p>
-                <p><strong>Адреса:</strong> вул. Прикладна, 123, м. Львів, Україна</p>
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Контактна інформація</h5>
+                    <p class="card-text"><i class="bi bi-telephone-fill me-2"></i><strong>Телефон:</strong> +38 (012) 345-67-89</p>
+                    <p class="card-text"><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> contact@example.com</p>
+                    <p class="card-text"><i class="bi bi-geo-alt-fill me-2"></i><strong>Адреса:</strong> вул. Прикладна, 123, м. Львів, Україна</p>
+                    <hr>
+                    <p class="card-text text-muted">Ми раді почути вас! Будь ласка, зв'яжіться з нами через будь-який зручний спосіб.</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <img src="images/feedback.webp" alt="Зворотний зв'язок" class="img-fluid rounded shadow" loading="lazy">
             </div>
         </div>
     </div>
 </section>
 <!--/FEEDBACK SECTION-->
+
 
     </main>
     <!--/MAIN CONTENT-->
