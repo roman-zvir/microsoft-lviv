@@ -45,69 +45,81 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!--MAIN CONTENT-->
-<main class="container mt-5">
+   <!--MAIN CONTENT-->
+<main class="container py-5">
     <!-- Profile Section -->
     <section class="text-center mb-5">
-        <img src="picture/me.jpg" alt="Роман Звір" class="rounded-circle mb-3" width="150" height="150">
-        <h1 class="mb-3">Роман Звір</h1>
-        <p class="lead">Студент Національного університету Львівської політехніки, фанат космосу, Linux, вільного програмного забезпечення, і крім цього учень Губи Сергія Костянтиновича</p>
+        <div class="mb-4">
+            <img src="picture/me.jpg" alt="Роман Звір" class="rounded-circle shadow-lg" width="200" height="200" style="object-fit: cover;">
+        </div>
+        <h1 class="display-5 mb-3 fw-bold">Роман Звір</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Студент Національного університету Львівської політехніки, 
+            пристрасний дослідник технологій: від космічних горизонтів до глибин Linux 
+            та вільного програмного забезпечення
+        </p>
     </section>
 
     <!-- Social Media Section -->
     <section class="mb-5">
-        <h2 class="text-center mb-4">Ловити зв'язок зі мною</h2>
-        <div class="d-flex justify-content-center">
-            <ul class="list-unstyled d-flex gap-3">
-                <li>
-                    <a href="https://github.com/Taras-P-Kob" class="text-dark" target="_blank" aria-label="GitHub">
-                        <i class="bi bi-github fs-3"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:roman.zvir.pp.2023@lpnu.ua" class="text-dark" target="_blank" aria-label="Email">
-                        <i class="bi bi-envelope fs-3"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtu.be/j32HElqG_jI?si=BQL9oHVDbGEzrpPE" class="text-dark" target="_blank" aria-label="YouTube">
-                        <i class="bi bi-youtube fs-3"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://discord.gg/704083683749003284" class="text-dark" target="_blank" aria-label="Discord">
-                        <i class="bi bi-discord fs-3"></i>
-                    </a>
-                </li>
-            </ul>
+        <h2 class="text-center mb-4 fw-semibold">Зв'язатися зі мною</h2>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="https://github.com/Taras-P-Kob" class="text-dark hover-scale" target="_blank" aria-label="GitHub">
+                <i class="bi bi-github fs-2 transition-transform"></i>
+            </a>
+            <a href="mailto:roman.zvir.pp.2023@lpnu.ua" class="text-dark hover-scale" target="_blank" aria-label="Email">
+                <i class="bi bi-envelope fs-2 transition-transform"></i>
+            </a>
+            <a href="https://youtu.be/j32HElqG_jI?si=BQL9oHVDbGEzrpPE" class="text-dark hover-scale" target="_blank" aria-label="YouTube">
+                <i class="bi bi-youtube fs-2 transition-transform"></i>
+            </a>
+            <a href="https://discord.gg/704083683749003284" class="text-dark hover-scale" target="_blank" aria-label="Discord">
+                <i class="bi bi-discord fs-2 transition-transform"></i>
+            </a>
         </div>
     </section>
 
-    <!-- Additional Information Section -->
-    <section>
-        <h2 class="mb-3">Мої інтереси та досягнення</h2>
-        <p>Я займаюся силовими тренуваннями, люблю писати код, створювати веб-додатки і вивчати нові технології. Працюю над проєктами, які допомагають удосконалювати навички програмування.</p>
+    <!-- Interests and Achievements Section -->
+    <section class="bg-light p-4 rounded-3 mb-5">
+        <h2 class="text-center mb-4 fw-semibold">Мої інтереси та досягнення</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p class="text-center">
+                    Захоплююсь силовими тренуваннями та постійно вдосконалюю свої навички в світі програмування. 
+                    Створюю веб-додатки та opencourse проєкти, які демонструють мою пристрасть до технологій 
+                    та безперервного навчання.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Countdown Section -->
-    <section id="countdown" class="text-center my-5">
-        <h3>До Міжнародного дня Звірів лишилося:</h3>
-        <div class="row justify-content-center mt-4">
-            <div class="col-3">
-                <div class="display-4" id="days"></div>
-                <p>Днів</p>
+    <section id="countdown" class="text-center">
+        <h3 class="mb-4 fw-semibold">До Міжнародного дня Звірів лишилося:</h3>
+        <div class="row justify-content-center g-3">
+            <div class="col-6 col-md-3">
+                <div class="bg-primary text-white rounded py-3">
+                    <div class="display-5 fw-bold" id="days"></div>
+                    <p class="mb-0">Днів</p>
+                </div>
             </div>
-            <div class="col-3">
-                <div class="display-4" id="hours"></div>
-                <p>Годин</p>
+            <div class="col-6 col-md-3">
+                <div class="bg-primary text-white rounded py-3">
+                    <div class="display-5 fw-bold" id="hours"></div>
+                    <p class="mb-0">Годин</p>
+                </div>
             </div>
-            <div class="col-3">
-                <div class="display-4" id="minutes"></div>
-                <p>Хвилин</p>
+            <div class="col-6 col-md-3">
+                <div class="bg-primary text-white rounded py-3">
+                    <div class="display-5 fw-bold" id="minutes"></div>
+                    <p class="mb-0">Хвилин</p>
+                </div>
             </div>
-            <div class="col-3">
-                <div class="display-4" id="seconds"></div>
-                <p>Секунд</p>
+            <div class="col-6 col-md-3">
+                <div class="bg-primary text-white rounded py-3">
+                    <div class="display-5 fw-bold" id="seconds"></div>
+                    <p class="mb-0">Секунд</p>
+                </div>
             </div>
         </div>
     </section>
