@@ -278,3 +278,17 @@ footer a:hover {
 }
 
 
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+#countdown div {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
