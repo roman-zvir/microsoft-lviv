@@ -14,8 +14,10 @@ document.querySelectorAll('#gallery img').forEach(img => {
     img.addEventListener('click', function() {
         const imageUrl = this.src;
         document.getElementById('lightboxImage').src = imageUrl;
-        $('#lightboxModal').modal('show');
+        const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+        modal.show();
     });
 });
+
 
 
