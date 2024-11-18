@@ -252,3 +252,21 @@ footer a:hover {
         max-height: 300px;
     }
 }
+
+
+.btn-secondary {
+    background-color: #0078d4; /* Синій фон */
+    color: #fff; /* Білий текст */
+    border-color: #0078d4; /* Синя рамка */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #005a9e; /* Темніший синій при наведенні */
+    border-color: #005a9e;
+}
+
