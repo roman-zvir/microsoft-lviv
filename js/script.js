@@ -9,3 +9,13 @@ document.querySelectorAll('#gallery img').forEach(img => {
     });
 });
 
+// Open lightbox on image click
+document.querySelectorAll('#gallery img').forEach(img => {
+    img.addEventListener('click', function() {
+        const imageUrl = this.src;
+        document.getElementById('lightboxImage').src = imageUrl;
+        $('#lightboxModal').modal('show');
+    });
+});
+
+
