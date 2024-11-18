@@ -293,7 +293,6 @@ footer a:hover {
   text-align: center;
 }
 
-<style>
 .hover-scale {
     transition: transform 0.3s ease;
 }
@@ -303,4 +302,4 @@ footer a:hover {
 .transition-transform {
     transition: transform 0.3s ease;
 }
-</style>
+
