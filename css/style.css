@@ -270,3 +270,35 @@ footer a:hover {
     border-color: #005a9e;
 }
 
+
+/* Анімація появи елементів при скролі */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-out;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ховер ефект для карток */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Анімація для заголовків */
+h2, .card-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+h2.visible, .card-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
