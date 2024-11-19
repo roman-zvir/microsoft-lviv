@@ -303,34 +303,3 @@ footer a:hover {
     transition: transform 0.3s ease;
 }
 
-/* General Styling for the Gallery Section */
-#gallery .carousel-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Small Screen Adjustments */
-@media (max-width: 768px) {
-    #gallery .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    #gallery img {
-        margin-bottom: 10px;
-    }
-    #gallery .carousel-control-prev,
-    #gallery .carousel-control-next {
-        width: 10%; /* Reduce the size of carousel controls */
-    }
-}
-
-/* Tiny Screen Adjustments */
-@media (max-width: 576px) {
-    #gallery h2 {
-        font-size: 1.5rem; /* Smaller font for headings */
-    }
-    #gallery img {
-        padding: 5px; /* Add some padding for better visuals */
-    }
-}
