@@ -116,69 +116,65 @@
     </main>
     <!--/MAIN CONTENT-->
 
-    <!-- GALLERY SECTION -->
+  <!-- GALLERY SECTION -->
 <section id="gallery" class="section py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Галерея</h2>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Перший слайд -->
-                <div class="carousel-item active">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <img src="picture/office.webp" alt="Microsoft Office" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/windows11.webp" alt="Windows 11" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/copilot.webp" alt="Microsoft Copilot" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
+    <h2>Галерея</h2>
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+             <!-- Перший слайд -->
+            <div class="carousel-item active">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/office.webp" alt="Microsoft Office" class="img-fluid rounded shadow-sm" loading="lazy">
                     </div>
-                </div>
-                <!-- Другий слайд -->
-                <div class="carousel-item">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <img src="picture/azure.png" alt="Microsoft Azure" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/office.jpg" alt="Microsoft Office" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/vscode.png" alt="VS Code" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/windows11.webp" alt="Windows 11" class="img-fluid rounded shadow-sm" loading="lazy">
                     </div>
-                </div>
-                <!-- Третій слайд -->
-                <div class="carousel-item">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <img src="picture/github.jpeg" alt="GitHub" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/edge.jpg" alt="Microsoft Edge" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
-                        <div class="col">
-                            <img src="picture/linkedIn.jpg" alt="LinkedIn" class="img-fluid rounded shadow-sm" loading="lazy">
-                        </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/copilot.webp" alt="Microsoft Copilot" class="img-fluid rounded shadow-sm" loading="lazy">
                     </div>
                 </div>
             </div>
-            <!-- Кнопки управління -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Попередній</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Наступний</span>
-            </button>
+            <!-- Другий слайд -->
+            <div class="carousel-item">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/azure.png" alt="Microsoft Azure" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/office.jpg" alt="Microsoft Office" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/vscode.png" alt="VS Code" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                </div>
+            </div>
+             <!-- Третій слайд -->
+            <div class="carousel-item">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/github.jpeg" alt="GitHub" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/edge.jpg" alt="Microsoft Edge" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <img src="picture/linkedIn.jpg" alt="LinkedIn" class="img-fluid rounded shadow-sm" loading="lazy">
+                    </div>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </section>
 <!-- /GALLERY SECTION -->
-
 
 <!-- Modal for Lightbox -->
 <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
