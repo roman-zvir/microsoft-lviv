@@ -2,7 +2,6 @@
 
 **My awesome super cool site for Microsoft Lviv**  
 *Ten out of ten!*  
-*Note: It's not fully finished yet!*
 
 ---
 
