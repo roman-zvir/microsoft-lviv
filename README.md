@@ -29,11 +29,11 @@ To view or edit the website locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/roman-zvir/microsoft_lviv.git
+   git clone https://github.com/roman-zvir/microsoft-lviv.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd microsoft_lviv
+   cd microsoft-lviv
    ```
 3. **Open `index.html` in your preferred web browser**.
 
