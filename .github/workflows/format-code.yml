@@ -1,0 +1,38 @@
+name: Super-Linter
+
+on: 
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Needed for pushing commits back
+
+      - name: Run Super-Linter with autofix
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_LOCAL: true
+          VALIDATE_ALL_CODEBASE: true
+          LINTER_RULES_PATH: .github/linters # optional if you have custom rules
+          AUTO_FIX: true  # Enable autofix
+
+      - name: Commit and push fixes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: fix linting issues [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
