@@ -1,44 +1,17 @@
-name: Lint and Deploy Static Website
+name: Super-Linter
 
-on:
-  push:
-    branches: [ "master" ]
+on: push
 
 jobs:
-  lint-and-deploy:
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install linters
-        run: |
-          npm install -g htmlhint stylelint stylelint-config-standard
-
-      - name: Check versions
-        run: |
-          htmlhint --version
-          stylelint --version
-
-      - name: List files to lint
-        run: |
-          find . -name "*.html"
-          find . -name "*.css"
-
-      - name: Run HTMLHint
-        run: find . -name "*.html" -print0 | xargs -0 htmlhint
-
-      - name: Run Stylelint
-        run: stylelint "**/*.css"
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
