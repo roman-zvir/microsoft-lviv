@@ -1,0 +1,30 @@
+name: Deploy Static Website
+
+on:
+  push:
+    branches: [ "master" ]  # or main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js (optional, for testing tools)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Run basic HTML/CSS validation (optional)
+      run: |
+        npm install -g htmlhint stylelint
+        htmlhint **/*.html || true
+        stylelint "**/*.css" || true
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .  # or your build directory
