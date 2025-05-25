@@ -21,8 +21,18 @@ jobs:
         run: |
           npm install -g htmlhint stylelint stylelint-config-standard
 
+      - name: Check versions
+        run: |
+          htmlhint --version
+          stylelint --version
+
+      - name: List files to lint
+        run: |
+          find . -name "*.html"
+          find . -name "*.css"
+
       - name: Run HTMLHint
-        run: htmlhint "**/*.html"
+        run: find . -name "*.html" -print0 | xargs -0 htmlhint
 
       - name: Run Stylelint
         run: stylelint "**/*.css"
