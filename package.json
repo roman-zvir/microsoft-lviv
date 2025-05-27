@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/roman-zvir/microsoft-lviv#readme",
   "devDependencies": {
+    "@stylistic/stylelint-plugin": "^3.1.2",
     "stylelint": "^16.19.1",
     "stylelint-config-standard": "^36.0.1"
   }

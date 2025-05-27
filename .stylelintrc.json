@@ -1,10 +1,9 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": ["@stylistic/stylelint-plugin"],
   "rules": {
-    "indentation": 2,
-    "string-quotes": "double",
-    "color-function-notation": "modern",
-    "alpha-value-notation": "percentage",
-    "function-comma-space-after": "always-single-line"
+    "@stylistic/indentation": 2,
+    "@stylistic/string-quotes": "double",
+    "@stylistic/function-comma-space-after": "always"
   }
 }
