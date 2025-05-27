@@ -50,6 +50,23 @@ h2 {
     font-size: 28px;
 }
 
+/* Footer */
+footer {
+    background-color: #f3f3f3;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
 /* Navigation */
 nav .menu {
     list-style: none;
@@ -205,22 +222,7 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
-footer {
-    background-color: #f3f3f3;
-    color: #666;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
 
-footer a {
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: none;
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
