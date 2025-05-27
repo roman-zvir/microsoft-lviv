@@ -1,36 +1,63 @@
----
-name: Super-Linter
+name: Lint and Auto-Fix
 
-on: 
+on:
   push:
     branches:
-      - main  # or your default branch
+      - main
 
 jobs:
-  super-lint:
-    name: Lint code base
+  lint-and-fix:
+    name: Lint & Auto-Fix Codebase
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Needed for pushing commits back
+          fetch-depth: 0
 
-      - name: Run Super-Linter with autofix
-        uses: github/super-linter@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_ALL_CODEBASE: true
-          AUTO_FIX: true  # Enable autofix
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-      - name: Commit and push fixes if any
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint HTML (htmlhint)
+        run: |
+          # Use your custom rules in .htmlhintrc
+          npx htmlhint "**/*.html" --config .htmlhintrc
+
+      - name: Lint & fix JavaScript (Standard)
+        run: |
+          # Auto-fix formatting, then report any remaining errors
+          npx standard --fix "js/**/*.js"
+          npx standard "js/**/*.js"
+
+      - name: Check for duplicate code (JSCPD)
+        run: |
+          # Raise threshold to 10% or disable if you prefer
+          npx jscpd --min-tokens 50 --threshold 10 "js/**" "/*.html"
+
+      - name: Lint & fix Markdown (textlint)
+        run: |
+          # Auto-fix terminology errors in README.md, etc.
+          npx textlint --fix "**/*.md"
+
+      - name: Lint JSON/YAML/Styles/CSS
+        run: |
+          npx stylelint "**/*.css" --fix
+          npx yamllint -c .github/workflows/.yamllint.yml "**/*.yml"
+          npx eslint --config .eslintrc.json --fix "**/*.json"
+
+      - name: Commit & push any fixes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "chore: fix linting issues [skip ci]"
+            git commit -m "chore: auto-fix lint issues [skip ci]"
             git push
           else
             echo "No changes to commit"
