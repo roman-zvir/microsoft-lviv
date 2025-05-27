@@ -37,8 +37,7 @@ jobs:
 
       - name: Check for duplicate code (JSCPD)
         run: |
-          # Raise threshold to 10% or disable if you prefer
-          npx jscpd --min-tokens 50 --threshold 10 "js/**" "/*.html"
+          npx jscpd --min-tokens 50 --threshold 10 "js/**/*.js" "**/*.html"
 
       - name: Lint & fix Markdown (textlint)
         run: |
