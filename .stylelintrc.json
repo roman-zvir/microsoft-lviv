@@ -1,5 +1,10 @@
 {
   "extends": "stylelint-config-standard",
-  "rules": {}
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "double",
+    "color-function-notation": "modern",
+    "alpha-value-notation": "percentage",
+    "function-comma-space-after": "always-single-line"
+  }
 }
-
