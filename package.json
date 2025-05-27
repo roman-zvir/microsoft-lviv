@@ -1,0 +1,20 @@
+{
+  "name": "microsoft-lviv",
+  "version": "1.0.0",
+  "description": "This repository hosts the source code for the Microsoft Lviv website, providing information about the company's presence in Lviv, Ukraine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-zvir/microsoft-lviv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-zvir/microsoft-lviv/issues"
+  },
+  "homepage": "https://github.com/roman-zvir/microsoft-lviv#readme"
+}
