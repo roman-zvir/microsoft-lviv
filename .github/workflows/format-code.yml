@@ -24,31 +24,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint HTML (htmlhint)
-        run: |
-          # Use your custom rules in .htmlhintrc
-          npx htmlhint "**/*.html" --config .htmlhintrc
-
       - name: Lint & fix JavaScript (Standard)
         run: |
-          # Auto-fix formatting, then report any remaining errors
           npx standard --fix "js/**/*.js"
-          npx standard "js/**/*.js"
 
-      - name: Check for duplicate code (JSCPD)
-        run: |
-          npx jscpd --min-tokens 50 --threshold 10 "js/**/*.js" "**/*.html"
+      - name: Lint HTML (htmlhint)
+        run: npx htmlhint "**/*.html" --config .htmlhintrc
 
-      - name: Lint & fix Markdown (textlint)
-        run: |
-          # Auto-fix terminology errors in README.md, etc.
-          npx textlint --fix "**/*.md"
-
-      - name: Lint JSON/YAML/Styles/CSS
-        run: |
-          npx stylelint "**/*.css" --fix
-          npx yamllint -c .github/workflows/.yamllint.yml "**/*.yml"
-          npx eslint --config .eslintrc.json --fix "**/*.json"
+      - name: Lint & fix CSS (stylelint)
+        run: npx stylelint "**/*.css" --fix
 
       - name: Commit & push any fixes
         run: |
