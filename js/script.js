@@ -1,3 +1,4 @@
+/* global bootstrap */
 document.querySelectorAll('#gallery img').forEach(img => {
     img.addEventListener('mouseenter', function() {
         this.style.transform = "scale(1.05)";
