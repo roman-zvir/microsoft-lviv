@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/roman-zvir/microsoft-lviv/issues"
   },
-  "homepage": "https://github.com/roman-zvir/microsoft-lviv#readme"
+  "homepage": "https://github.com/roman-zvir/microsoft-lviv#readme",
+  "devDependencies": {
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^36.0.1"
+  }
 }
