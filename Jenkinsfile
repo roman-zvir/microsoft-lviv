@@ -29,6 +29,16 @@ pipeline {
                 }
             }
         }
+        stage('Debug logs access') {
+  steps {
+    sh '''
+      whoami
+      ls -ld /var/log/apache2
+      ls -l /var/log/apache2/access.log || echo "No access.log"
+      sudo ls -l /var/log/apache2/access.log || echo "No access.log with sudo"
+    '''
+  }
+}
         stage('Check Apache logs for 4xx and 5xx errors') {
             steps {
                 script {
